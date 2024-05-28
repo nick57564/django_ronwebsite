@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+        {% load static %}
+        <link rel="stylesheet" type="text/css" href="{% static 'cs/contact_style.css' %}">
+        <style>
+            body {
+                padding: 0;
+                margin: 0;
+                background: url("{% static 'Image/background.jpg' %}") no-repeat center center fixed;
+                background-size: cover !important;
+            }
+        </style>
+
+    </head>
+    <body>
+        <div class="info-box">
+            <p>Ron Dirks</p>
+            <p>Jan van der Wegestraat 15</p>
+            <p>5622 JS Eindhoven</p>
+            <p>06-12875490</p>
+            <p>info@rondirks.nl</p>
+            <p>BTW-ID NL001889911B18</p>
+        </div>
+        <form class="form" method="post" action=".">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <button type="submit">Verstuur</button>
+        </form>
+
+    </body>
+</html>
