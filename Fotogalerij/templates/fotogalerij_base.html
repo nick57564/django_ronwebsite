@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ron dirks Badkamer,keuken en toilet fotogalerij</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'cs/fotogalerij_style.css' %}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+        /* Your existing custom styles */
+    </style>
+</head>
+<body>
+  <style>
+    body {
+      background-color: #202834;
+    }
+  </style>
+<header class="sticky-top">
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <a class="navbar-brand" href="#">Ron Dirks</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ml-auto">
+              <li class="nav-item">
+                  <a class="nav-link" href="{% url 'base_view' %}"><i class="uil uil-home"></i> Home</a>
+              </li>
+              <li class="nav-item">
+                  <a class="nav-link" href="{% url 'contact' %}"><i class="uil uil-envelope"></i> Contact</a>
+              </li>
+          </ul>
+      </div>
+  </nav>
+</header>
+
+<div class="container mt-5">
+    <div class="row">
+        {% for mymodel in mymodels %}
+            <div class="col-md-4 mb-4">
+                <div class="card">
+                    {% if mymodel.image %}
+                        <img src="{{ mymodel.image.url }}" class="card-img-top" alt="{{ mymodel.title }}">
+                    {% else %}
+                        <img src="https://via.placeholder.com/150" class="card-img-top" alt="No image available">
+                    {% endif %}
+                    <div class="card-body">
+                        <h5 class="card-title">{{ mymodel.title }}</h5>
+                        <p class="card-text">{{ mymodel.description }}</p>
+                    </div>
+                </div>
+            </div>
+        {% endfor %}
+    </div>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<script>
+    // ScrollReveal animations
+    ScrollReveal({
+        distance: '60px',
+        duration: 2500,
+        delay: 400
+    });
+
+    ScrollReveal().reveal('.navbar', { delay: 500, origin: 'top' });
+    ScrollReveal().reveal('.card', { delay: 500, origin: 'bottom', interval: 200 });
+</script>
+</body>
+</html>
