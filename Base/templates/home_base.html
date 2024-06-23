@@ -3,106 +3,107 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Ron dirks Badkamer,keuken en toilet</title>
+  <title>Ron Dirks Badkamer, Keuken en Toilet</title>
   {% load static %}
   <link rel="stylesheet" href="{% static 'cs/swiper-bundle.min.css' %}">
   <link rel="stylesheet" href="{% static 'cs/base_style.css' %}">
   <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
 </head>
 <body>
 
-  <header>
-    <div class="nav-bar">
-      <a href="" class="logo">Ron dirks</a>
-      <div class="navigation">
-        <div class="nav-items">
-          <i class="uil uil-times nav-close-btn"></i>
-          <a href="{% url 'fotogalerij' %}">Fotogalerij</a>
-          <a href="{% url 'contact' %}">Contact</a>
-        </div>
-      </div>
-      <i class="uil uil-apps nav-menu-btn"></i>
+<header>
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a href="#" class="navbar-brand logo">Ron Dirks</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item">
+          <a class="nav-link" href="{% url 'fotogalerij' %}">Fotogalerij</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="{% url 'contact' %}">Contact</a>
+        </li>
+      </ul>
     </div>
-  </header>
+  </nav>
+</header>
 
-  <section class="home">
-    <div class="media-icons">
-      <a href="https://www.linkedin.com/in/ron-dirks-4b7a624b/"><i class="uil uil-linkedin"></i></a>
-      <a href="https://www.youtube.com/@RonDirksRenovatie"><i class="uil uil-youtube"></i></a>
-    </div>
+<section class="home">
+  <div class="media-icons">
+    <a href="https://www.linkedin.com/in/ron-dirks-4b7a624b/"><i class="uil uil-linkedin"></i></a>
+    <a href="https://www.youtube.com/@RonDirksRenovatie"><i class="uil uil-youtube"></i></a>
+  </div>
 
-    <script>
+  <script>
     function scrollToBottom() {
         window.scrollTo(0, document.body.scrollHeight);
     }
-    </script>
+  </script>
 
-
-    <div class="swiper bg-slider">
-      <div class="swiper-wrapper">
-        <div class="swiper-slide">
-          <img src="{% static 'Image/bg1.jpg' %}" alt="">
-          <div class="text-content">
-            <h2 class="title">Wasbak<span> Installatie</span></h2>
-            <p>Bij Ron Dirks installeren we hoogwaardige wasbakken die zowel praktisch als stijlvol zijn. 
-            Onze vakmensen zorgen voor een naadloze installatie, zodat uw wasbak perfect functioneert en lang meegaat.</p>
-            <button class="read-btn" onclick="scrollToBottom()">Over ons <i class="uil uil-arrow-right"></i></button>
-          </div>
+  <div class="swiper bg-slider">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide">
+        <img src="{% static 'Image/bg1.jpg' %}" alt="">
+        <div class="text-content">
+          <h2 class="title">Wasbak<span> Installatie</span></h2>
+          <p>Bij Ron Dirks installeren we hoogwaardige wasbakken die zowel praktisch als stijlvol zijn. Onze vakmensen zorgen voor een naadloze installatie, zodat uw wasbak perfect functioneert en lang meegaat.</p>
+          <button class="read-btn" onclick="scrollToBottom()">Over ons <i class="uil uil-arrow-right"></i></button>
         </div>
-        <div class="swiper-slide dark-layer">
-          <img src="{% static 'Image/bg2.jpg' %}" alt="">
-          <div class="text-content">
-            <h2 class="title">Bad<span> Installatie</span></h2>
-            <p> Een bad van Ron Dirks betekent ultiem comfort en luxe in uw badkamer. 
-            Laat ons uw droombad installeren en geniet van ontspannende badmomenten, elke dag opnieuw.</p>
-            <button class="read-btn" onclick="scrollToBottom()">Over ons <i class="uil uil-arrow-right"></i></button>
-          </div>
+      </div>
+      <div class="swiper-slide dark-layer">
+        <img src="{% static 'Image/bg2.jpg' %}" alt="">
+        <div class="text-content">
+          <h2 class="title">Bad<span> Installatie</span></h2>
+          <p>Een bad van Ron Dirks betekent ultiem comfort en luxe in uw badkamer. Laat ons uw droombad installeren en geniet van ontspannende badmomenten, elke dag opnieuw.</p>
+          <button class="read-btn" onclick="scrollToBottom()">Over ons <i class="uil uil-arrow-right"></i></button>
         </div>
-        <div class="swiper-slide dark-layer">
-          <img src="{% static 'Image/bg3.jpg' %}" alt="">
-          <div class="text-content">
-            <h2 class="title">Douche<span> Installatie</span></h2>
-            <p>Verhoog uw douche-ervaring met onze professionele installatie. 
-            Of u nu kiest voor een regendouche of een efficiënte handdouche, wij garanderen kwaliteit en duurzaamheid.</p>
-            <button class="read-btn" onclick="scrollToBottom()">Over ons <i class="uil uil-arrow-right"></i></button>
-          </div>
+      </div>
+      <div class="swiper-slide dark-layer">
+        <img src="{% static 'Image/bg3.jpg' %}" alt="">
+        <div class="text-content">
+          <h2 class="title">Douche<span> Installatie</span></h2>
+          <p>Verhoog uw douche-ervaring met onze professionele installatie. Of u nu kiest voor een regendouche of een efficiënte handdouche, wij garanderen kwaliteit en duurzaamheid.</p>
+          <button class="read-btn" onclick="scrollToBottom()">Over ons <i class="uil uil-arrow-right"></i></button>
         </div>
-        <div class="swiper-slide">
-          <img src="{% static 'Image/bg4.jpg' %}" alt="">
-          <div class="text-content">
-            <h2 class="title">Toilet<span> Installatie</span></h2>
-            <p>Voor een betrouwbaar en efficiënt toilet kiest u Ron Dirks. 
-            Wij bieden deskundig advies en zorgvuldige installatie, zodat uw toilet altijd optimaal functioneert.</p>
-            <button class="read-btn" onclick="scrollToBottom()">Over ons <i class="uil uil-arrow-right"></i></button>
-          </div>
+      </div>
+      <div class="swiper-slide">
+        <img src="{% static 'Image/bg4.jpg' %}" alt="">
+        <div class="text-content">
+          <h2 class="title">Toilet<span> Installatie</span></h2>
+          <p>Voor een betrouwbaar en efficiënt toilet kiest u Ron Dirks. Wij bieden deskundig advies en zorgvuldige installatie, zodat uw toilet altijd optimaal functioneert.</p>
+          <button class="read-btn" onclick="scrollToBottom()">Over ons <i class="uil uil-arrow-right"></i></button>
         </div>
       </div>
     </div>
-    
-    <div class="bg-slider-thumbs">
-      <div class="swiper-wrapper thumbs-container">
-        <img src="{% static 'Image/bg1.jpg' %}" class="swiper-slide" alt="">
-        <img src="{% static 'Image/bg2.jpg' %}" class="swiper-slide" alt="">
-        <img src="{% static 'Image/bg3.jpg' %}" class="swiper-slide" alt="">
-        <img src="{% static 'Image/bg4.jpg' %}" class="swiper-slide" alt="">
-      </div>
+  </div>
+
+  <div class="bg-slider-thumbs">
+    <div class="swiper-wrapper thumbs-container">
+      <img src="{% static 'Image/bg1.jpg' %}" class="swiper-slide" alt="">
+      <img src="{% static 'Image/bg2.jpg' %}" class="swiper-slide" alt="">
+      <img src="{% static 'Image/bg3.jpg' %}" class="swiper-slide" alt="">
+      <img src="{% static 'Image/bg4.jpg' %}" class="swiper-slide" alt="">
     </div>
-  </section>
+  </div>
+</section>
 
-  <section class="about section">
-    <h2>Over ons</h2>
-    <p>Ons bedrijf is gebaseerd op het feit dat de behoeften van de klant van het grootste belang zijn. 
-    Ons team is daarom volledig toegewijd om aan deze behoeften te voldoen. <br><br>
-    Als gevolg hiervan bestaat een groot deel van onze klandizie uit terugkerende klanten en doorverwijzingen. <br><br>
-    U kunt bij Ron Dirks terecht voor het compleet aanleggen van uw badkamer,keuken en toilet. 
-    Aanleggen van leidingwerk, electra, tegelwerk, stucwerk, en het plaatsen van sanitair. <br><br>
-    Natuurlijk bent u vrij om zelf uw sanitair aan te schaffen welke wij voor u kunnen installeren. <br><br>
-    Dus voor renovatie onderhoud en nieuwbouw : Ron Dirks. Wij zouden graag uw vertrouwen winnen door u de beste service aan te bieden die er in onze bedrijfstak bestaat.</p>
+<section class="about section">
+  <h2>Over ons</h2>
+  <p>Ons bedrijf is gebaseerd op het feit dat de behoeften van de klant van het grootste belang zijn. Ons team is daarom volledig toegewijd om aan deze behoeften te voldoen. <br><br>
+  Als gevolg hiervan bestaat een groot deel van onze klandizie uit terugkerende klanten en doorverwijzingen. <br><br>
+  U kunt bij Ron Dirks terecht voor het compleet aanleggen van uw badkamer, keuken en toilet. Aanleggen van leidingwerk, electra, tegelwerk, stucwerk, en het plaatsen van sanitair. <br><br>
+  Natuurlijk bent u vrij om zelf uw sanitair aan te schaffen welke wij voor u kunnen installeren. <br><br>
+  Dus voor renovatie onderhoud en nieuwbouw: Ron Dirks. Wij zouden graag uw vertrouwen winnen door u de beste service aan te bieden die er in onze bedrijfstak bestaat.</p>
+</section>
 
-  </section>
-
-  <script src="{% static 'script/swiper-bundle.min.js' %}"></script>
-  <script src="{% static 'script/main.js' %}"></script>
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<script src="{% static 'script/swiper-bundle.min.js' %}"></script>
+<script src="{% static 'script/main.js' %}"></script>
 
 </body>
 </html>
