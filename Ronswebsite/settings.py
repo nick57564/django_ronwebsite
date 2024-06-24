@@ -22,15 +22,15 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-qae2%dx_d@qmf1p7n48vj^s#qu(1t%(d(431@z4tu!1j!r22ct'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = ['18.171.208.82', 'tensi.site', 'www.tensi.site', '127.0.0.1']
 
 EMAIL_HOST = 'smtp.gmail.com'
 EMAIL_USE_TLS = True
 EMAIL_PORT = 587
-EMAIL_HOST_USER = 'nc.vanderworp@gmail.com'
-EMAIL_HOST_PASSWORD = 'gyey knqs ycbz tfby'
+EMAIL_HOST_USER = 'rondirksbadkamers@gmail.com'
+EMAIL_HOST_PASSWORD = 'gipn cvzq ypyu qxsf'
 
 # Application definition
 
@@ -130,3 +130,8 @@ STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static')]
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+CSRF_TRUSTED_ORIGINS = [
+    'https://tensi.site',
+    # Add other trusted origins as needed
+]

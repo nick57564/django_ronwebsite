@@ -13,19 +13,13 @@ def contact(request):
             naam = form.cleaned_data['naam']
             email = form.cleaned_data['email']
             telefoonnummer = form.cleaned_data['telefoonnummer']
-            adres = form.cleaned_data['adres']
-            plaats = form.cleaned_data['plaats']
-            postcode = form.cleaned_data['postcode']
-            reacties = form.cleaned_data['reacties']
+            opmerkingen = form.cleaned_data['opmerkingen']
 
             html = render_to_string('emails/contactform.html', {
                 'naam': naam,
                 'email': email,
-                'telefoonnummer': telefoonnummer,  
-                'adres': adres,
-                'plaats': plaats, 
-                'postcode': postcode,
-                'reacties': reacties
+                'telefoonnummer': telefoonnummer,
+                'opmerkingen': opmerkingen,
             })
 
             send_mail('The contact form subject', 'This is the message', 'Nc.vanderworp@gmail.com', ['Nc.vanderworp@gmail.com'], html_message=html)
