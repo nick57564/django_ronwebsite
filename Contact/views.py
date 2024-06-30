@@ -3,6 +3,7 @@ from django.core.mail import send_mail
 from django.shortcuts import render, redirect
 from django.template.loader import render_to_string
 from .forms import ContactForm, send_email_task
+from django.contrib import messages
 import time
 
 def contact(request):
@@ -21,8 +22,8 @@ def contact(request):
                 'telefoonnummer': telefoonnummer,
                 'opmerkingen': opmerkingen,
             })
-
-            send_mail('The contact form subject', 'This is the message', 'Nc.vanderworp@gmail.com', ['Nc.vanderworp@gmail.com'], html_message=html)
+            send_mail('The contact form subject', 'This is the message', 'rondirksbadkamers@gmail.com', ['rondirksbadkamers@gmail.com'], html_message=html)
+            messages.success(request, "Formulier verzonden, hartelijk dank wij nemen zo snel mogelijk contact met u op!")
             return redirect('contact') 
             
     else:

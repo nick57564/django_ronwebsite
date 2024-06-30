@@ -55,21 +55,40 @@
             </div>
         </nav>
     </header>
+
+    {% if messages %}
+        <div class="container">
+            <ul class="messages">
+                {% for message in messages %}
+                    <div class="alert alert-warning alert-dismissible fade show" role="alert">
+                        {{ message }}
+                        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                {% endfor %}
+            </ul>
+        </div>
+    {% endif %}
+
     <div class="container">
         <div class="info-box">
             <p>Ron Dirks</p>
             <p>Jan van der Wegestraat 15</p>
             <p>5622 JS Eindhoven</p>
             <p>06-12875490</p>
-            <p>info@rondirks.nl</p>
+            <p>rondirksbadkamers@gmail.com</p>
             <p>BTW-ID NL001889911B18</p>
         </div>
     </div>
+    <div class="container">
         <form class="form" method="post" action=".">
             {% csrf_token %}
             {{ form.as_p }}
             <button type="submit" class="btn btn-primary">Verstuur</button>
         </form>
+    </div>
+    
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
